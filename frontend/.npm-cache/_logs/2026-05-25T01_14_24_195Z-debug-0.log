@@ -1,0 +1,536 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.6.2
+2 info using node@v24.13.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:P:\AI_code\WebGIS\CSBDP_20260525\CSBDP-main\frontend\.npmrc
+5 silly config load:file:C:\Users\Administrator\.npmrc
+6 silly config load:file:C:\Users\Administrator\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".\\.npm-cache"
+9 verbose logfile logs-max:10 dir:P:\AI_code\WebGIS\CSBDP_20260525\CSBDP-main\frontend\.npm-cache\_logs\2026-05-25T01_14_24_195Z-
+10 verbose logfile P:\AI_code\WebGIS\CSBDP_20260525\CSBDP-main\frontend\.npm-cache\_logs\2026-05-25T01_14_24_195Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly fetch manifest @emnapi/core@^1.7.1
+15 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fcore cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http fetch GET 200 https://registry.npmjs.org/npm 871ms
+18 http fetch GET 200 https://registry.npmjs.org/@emnapi%2fcore 1117ms (cache miss)
+19 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fcore set size:undefined disposed:false
+20 silly fetch manifest @emnapi/runtime@^1.7.1
+21 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fruntime cache-miss
+22 http fetch GET 200 https://registry.npmjs.org/@emnapi%2fruntime 197ms (cache miss)
+23 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fruntime set size:undefined disposed:false
+24 silly placeDep ROOT @emnapi/core@1.10.0 OK for: @napi-rs/wasm-runtime@1.1.4 want: ^1.7.1
+25 silly placeDep ROOT @emnapi/runtime@1.10.0 OK for: @napi-rs/wasm-runtime@1.1.4 want: ^1.7.1
+26 silly reify mark retired [
+26 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\acorn',
+26 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\acorn',
+26 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\acorn.cmd',
+26 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\acorn.ps1'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\fsevents'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\json5',
+28 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\json5',
+28 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\json5.cmd',
+28 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\json5.ps1'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\jsesc',
+29 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\jsesc',
+29 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\jsesc.cmd',
+29 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\jsesc.ps1'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\lightningcss-darwin-arm64'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\mime',
+31 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\mime',
+31 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\mime.cmd',
+31 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\mime.ps1'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\nanoid',
+32 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\nanoid',
+32 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\nanoid.cmd',
+32 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\nanoid.ps1'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\rolldown',
+33 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rolldown',
+33 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rolldown.cmd',
+33 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rolldown.ps1'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\rollup',
+34 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rollup',
+34 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rollup.cmd',
+34 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rollup.ps1'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\topojson-client',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topo2geo',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topo2geo.cmd',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topo2geo.ps1',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topomerge',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topomerge.cmd',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topomerge.ps1',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topoquantize',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topoquantize.cmd',
+35 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topoquantize.ps1'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\typescript',
+36 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsc',
+36 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsc.cmd',
+36 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsc.ps1',
+36 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsserver',
+36 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsserver.cmd',
+36 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsserver.ps1'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\vite',
+37 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vite',
+37 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vite.cmd',
+37 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vite.ps1'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\vue-tsc',
+38 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vue-tsc',
+38 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vue-tsc.cmd',
+38 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vue-tsc.ps1'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\yaml',
+39 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\yaml',
+39 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\yaml.cmd',
+39 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\yaml.ps1'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\@babel\\parser',
+40 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\parser',
+40 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\parser.cmd',
+40 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\parser.ps1'
+40 silly reify ]
+41 silly reify mark retired [
+41 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\parser',
+41 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\parser',
+41 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\parser.cmd',
+41 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\parser.ps1'
+41 silly reify ]
+42 silly reify mark retired [
+42 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@rolldown\\binding-darwin-arm64'
+42 silly reify ]
+43 silly reify moves {
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\acorn': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.acorn-ng0RvmB7',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\acorn': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.acorn-85johWZ6',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\acorn.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.acorn.cmd-j2nXEb8a',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\acorn.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.acorn.ps1-lm1J8qMi',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\fsevents': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.fsevents-H9jbzIr5',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\json5': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.json5-F1ZsbiYj',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\json5': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.json5-duVr7GKQ',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\json5.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.json5.cmd-M38U6ljI',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\json5.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.json5.ps1-tIaCgDQ1',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\jsesc': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.jsesc-1ipBi6am',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\jsesc': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.jsesc-PZXkswz7',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\jsesc.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.jsesc.cmd-JsCXVct9',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\jsesc.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.jsesc.ps1-qJzOEf6s',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\lightningcss-darwin-arm64': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.lightningcss-darwin-arm64-8cDVKfJI',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\mime': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.mime-tsWKMxli',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\mime': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.mime-4fgklX3y',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\mime.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.mime.cmd-W3gRJRjp',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\mime.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.mime.ps1-wtIDVkEV',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\nanoid': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.nanoid-u4eNpvza',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\nanoid': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.nanoid-kcTKP8Y0',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\nanoid.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.nanoid.cmd-XOjd8Xoj',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\nanoid.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.nanoid.ps1-lYaeFO8R',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\rolldown': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.rolldown-FOjH5zXl',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rolldown': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.rolldown-0ceUheZg',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rolldown.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.rolldown.cmd-au9DKoVg',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rolldown.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.rolldown.ps1-v4AdbJky',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\rollup': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.rollup-IKitb85N',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rollup': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.rollup-iSvqoJ5t',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rollup.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.rollup.cmd-2lgjvIto',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\rollup.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.rollup.ps1-l6zjCH9W',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\topojson-client': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.topojson-client-hnb8OYP2',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topo2geo': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topo2geo-36qyQy4U',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topo2geo.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topo2geo.cmd-FCDK9EqH',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topo2geo.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topo2geo.ps1-0IDlSQh3',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topomerge': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topomerge-cQ8Hczj1',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topomerge.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topomerge.cmd-8eXdItG1',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topomerge.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topomerge.ps1-NkZWHKKH',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topoquantize': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topoquantize-XIPboVS7',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topoquantize.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topoquantize.cmd-8sUwoIb5',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\topoquantize.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.topoquantize.ps1-RzwrzpMi',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\typescript': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.typescript-tmfEgEva',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsc': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.tsc-zDLfD4YS',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsc.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.tsc.cmd-X8Ln9MqO',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsc.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.tsc.ps1-xl7WbSpe',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsserver': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.tsserver-PQ2yqIe3',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsserver.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.tsserver.cmd-kt6nSEwL',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\tsserver.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.tsserver.ps1-3ro0CT44',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\vite': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.vite-GSM1fHJ3',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vite': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.vite-DHpWL2fl',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vite.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.vite.cmd-yMVHmJvg',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vite.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.vite.ps1-1dty2ttM',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\vue-tsc': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.vue-tsc-z7erkH92',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vue-tsc': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.vue-tsc-QLsldxeZ',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vue-tsc.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.vue-tsc.cmd-jlA7DEcr',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\vue-tsc.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.vue-tsc.ps1-6wKpBpaY',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\yaml': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.yaml-cTWVKqDd',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\yaml': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.yaml-4AjhKnZc',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\yaml.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.yaml.cmd-fYbe2rTr',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\yaml.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.yaml.ps1-O8x3h44K',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\@babel\\parser': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\@babel\\.parser-WFdv03QZ',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\parser': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\.parser-OAAln3Hy',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\parser.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\.parser.cmd-uEl8zeqN',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\parser.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\generator\\node_modules\\.bin\\.parser.ps1-vq6MZzKe',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\parser': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@babel\\.parser-AqRzylhv',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\parser': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.parser-gAo8kp4U',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\parser.cmd': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.parser.cmd-dB702HCF',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\parser.ps1': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\.bin\\.parser.ps1-4bqGxSAq',
+43 silly reify   'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@rolldown\\binding-darwin-arm64': 'P:\\AI_code\\WebGIS\\CSBDP_20260525\\CSBDP-main\\frontend\\node_modules\\@rolldown\\.binding-darwin-arm64-ZSA0YRlC'
+43 silly reify }
+44 silly audit bulk request {
+44 silly audit   '@babel/generator': [ '8.0.0-rc.5' ],
+44 silly audit   '@babel/helper-string-parser': [ '8.0.0-rc.5', '7.27.1' ],
+44 silly audit   '@babel/helper-validator-identifier': [ '8.0.0-rc.5', '7.28.5' ],
+44 silly audit   '@babel/parser': [ '8.0.0-rc.5', '7.29.3' ],
+44 silly audit   '@babel/types': [ '8.0.0-rc.5', '7.29.0' ],
+44 silly audit   '@cesium-china/cesium-map': [ '1.0.0' ],
+44 silly audit   '@cesium/engine': [ '25.0.0' ],
+44 silly audit   '@cesium/wasm-splats': [ '0.1.0-alpha.2' ],
+44 silly audit   '@cesium/widgets': [ '15.0.0' ],
+44 silly audit   '@ctrl/tinycolor': [ '4.2.0' ],
+44 silly audit   '@element-plus/icons-vue': [ '2.3.2' ],
+44 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+44 silly audit   '@floating-ui/core': [ '1.7.5' ],
+44 silly audit   '@floating-ui/dom': [ '1.7.6' ],
+44 silly audit   '@floating-ui/utils': [ '0.2.11' ],
+44 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+44 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+44 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+44 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+44 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+44 silly audit   '@napi-rs/wasm-runtime': [ '1.1.4' ],
+44 silly audit   '@oxc-project/types': [ '0.132.0' ],
+44 silly audit   '@sxzz/popperjs-es': [ '2.11.8' ],
+44 silly audit   '@rolldown/binding-android-arm64': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-darwin-arm64': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-darwin-x64': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-freebsd-x64': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-wasm32-wasi': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.0.2' ],
+44 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.0.2' ],
+44 silly audit   '@rolldown/pluginutils': [ '1.0.1' ],
+44 silly audit   '@rollup/pluginutils': [ '4.2.1' ],
+44 silly audit   picomatch: [ '2.3.2', '4.0.4' ],
+44 silly audit   '@spz-loader/core': [ '0.3.1' ],
+44 silly audit   '@tweenjs/tween.js': [ '25.0.0' ],
+44 silly audit   '@tybys/wasm-util': [ '0.10.2' ],
+44 silly audit   '@types/estree': [ '1.0.9' ],
+44 silly audit   '@types/geojson': [ '7946.0.16' ],
+44 silly audit   '@types/jsesc': [ '2.5.1' ],
+44 silly audit   '@types/leaflet': [ '1.9.21' ],
+44 silly audit   '@types/leaflet.markercluster': [ '1.5.6' ],
+44 silly audit   '@types/lodash': [ '4.17.24' ],
+44 silly audit   '@types/lodash-es': [ '4.17.12' ],
+44 silly audit   '@types/trusted-types': [ '2.0.7' ],
+44 silly audit   '@types/web-bluetooth': [ '0.0.21' ],
+44 silly audit   '@vitejs/plugin-vue': [ '6.0.7' ],
+44 silly audit   '@volar/language-core': [ '2.4.28' ],
+44 silly audit   '@volar/source-map': [ '2.4.28' ],
+44 silly audit   '@volar/typescript': [ '2.4.28' ],
+44 silly audit   '@vue-macros/common': [ '3.1.2' ],
+44 silly audit   '@vue/compiler-core': [ '3.5.34' ],
+44 silly audit   '@vue/compiler-dom': [ '3.5.34' ],
+44 silly audit   '@vue/compiler-sfc': [ '3.5.34' ],
+44 silly audit   'magic-string': [ '0.30.21', '0.25.9' ],
+44 silly audit   '@vue/compiler-ssr': [ '3.5.34' ],
+44 silly audit   '@vue/devtools-api': [ '8.1.2' ],
+44 silly audit   '@vue/devtools-kit': [ '8.1.2' ],
+44 silly audit   '@vue/devtools-shared': [ '8.1.2' ],
+44 silly audit   '@vue/language-core': [ '3.3.1' ],
+44 silly audit   '@vue/reactivity': [ '3.5.34' ],
+44 silly audit   '@vue/runtime-core': [ '3.5.34' ],
+44 silly audit   '@vue/runtime-dom': [ '3.5.34' ],
+44 silly audit   '@vue/server-renderer': [ '3.5.34' ],
+44 silly audit   '@vue/shared': [ '3.5.34' ],
+44 silly audit   '@vueuse/core': [ '14.3.0' ],
+44 silly audit   '@vueuse/metadata': [ '14.3.0' ],
+44 silly audit   '@vueuse/shared': [ '14.3.0' ],
+44 silly audit   '@zip.js/zip.js': [ '2.8.26' ],
+44 silly audit   acorn: [ '8.16.0' ],
+44 silly audit   'agent-base': [ '6.0.2' ],
+44 silly audit   'alien-signals': [ '3.2.1' ],
+44 silly audit   'ast-kit': [ '2.2.0' ],
+44 silly audit   'ast-walker-scope': [ '0.8.3' ],
+44 silly audit   'async-validator': [ '4.2.5' ],
+44 silly audit   asynckit: [ '0.4.0' ],
+44 silly audit   'at-least-node': [ '1.0.0' ],
+44 silly audit   autolinker: [ '4.1.5' ],
+44 silly audit   axios: [ '1.16.1' ],
+44 silly audit   'base64-arraybuffer': [ '1.0.2' ],
+44 silly audit   birpc: [ '2.9.0' ],
+44 silly audit   'bitmap-sdf': [ '1.0.4' ],
+44 silly audit   'but-unzip': [ '0.1.10' ],
+44 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+44 silly audit   cesium: [ '1.141.0' ],
+44 silly audit   chokidar: [ '5.0.0' ],
+44 silly audit   'combined-stream': [ '1.0.8' ],
+44 silly audit   commander: [ '2.20.3' ],
+44 silly audit   confbox: [ '0.2.4', '0.1.8' ],
+44 silly audit   'css-line-break': [ '2.1.0' ],
+44 silly audit   csstype: [ '3.2.3' ],
+44 silly audit   dayjs: [ '1.11.20' ],
+44 silly audit   debug: [ '4.4.3', '2.6.9' ],
+44 silly audit   'delayed-stream': [ '1.0.0' ],
+44 silly audit   depd: [ '2.0.0' ],
+44 silly audit   destroy: [ '1.2.0' ],
+44 silly audit   'detect-libc': [ '2.1.2' ],
+44 silly audit   dompurify: [ '3.4.5' ],
+44 silly audit   draco3d: [ '1.5.7' ],
+44 silly audit   'dunder-proto': [ '1.0.1' ],
+44 silly audit   earcut: [ '3.0.2' ],
+44 silly audit   'ee-first': [ '1.1.1' ],
+44 silly audit   'element-plus': [ '2.14.0' ],
+44 silly audit   encodeurl: [ '2.0.0' ],
+44 silly audit   entities: [ '7.0.1' ],
+44 silly audit   'es-define-property': [ '1.0.1' ],
+44 silly audit   'es-errors': [ '1.3.0' ],
+44 silly audit   'es-object-atoms': [ '1.1.2' ],
+44 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+44 silly audit   'escape-html': [ '1.0.3' ],
+44 silly audit   'estree-walker': [ '2.0.2' ],
+44 silly audit   etag: [ '1.8.1' ],
+44 silly audit   eventemitter3: [ '5.0.4' ],
+44 silly audit   exsolve: [ '1.0.8' ],
+44 silly audit   'fast-diff': [ '1.3.0' ],
+44 silly audit   fdir: [ '6.5.0' ],
+44 silly audit   'follow-redirects': [ '1.16.0' ],
+44 silly audit   'form-data': [ '4.0.5' ],
+44 silly audit   fresh: [ '0.5.2' ],
+44 silly audit   'fs-extra': [ '9.1.0' ],
+44 silly audit   fsevents: [ '2.3.3' ],
+44 silly audit   'function-bind': [ '1.1.2' ],
+44 silly audit   'get-intrinsic': [ '1.3.0' ],
+44 silly audit   'get-proto': [ '1.0.1' ],
+44 silly audit   gopd: [ '1.2.0' ],
+44 silly audit   'graceful-fs': [ '4.2.11' ],
+44 silly audit   'grapheme-splitter': [ '1.0.4' ],
+44 silly audit   'has-symbols': [ '1.1.0' ],
+44 silly audit   'has-tostringtag': [ '1.0.2' ],
+44 silly audit   hasown: [ '2.0.3' ],
+44 silly audit   hookable: [ '5.5.3' ],
+44 silly audit   html2canvas: [ '1.4.1' ],
+44 silly audit   'http-errors': [ '2.0.1' ],
+44 silly audit   'https-proxy-agent': [ '5.0.1' ],
+44 silly audit   inherits: [ '2.0.4' ],
+44 silly audit   'is-reference': [ '1.2.1' ],
+44 silly audit   jsep: [ '1.4.0' ],
+44 silly audit   jsesc: [ '3.1.0' ],
+44 silly audit   json5: [ '2.2.3' ],
+44 silly audit   jsonfile: [ '6.2.1' ],
+44 silly audit   kdbush: [ '4.1.0' ],
+44 silly audit   'ktx-parse': [ '1.1.0' ],
+44 silly audit   leaflet: [ '1.9.4' ],
+44 silly audit   'leaflet.markercluster': [ '1.5.3' ],
+44 silly audit   lerc: [ '2.0.0' ],
+44 silly audit   lightningcss: [ '1.32.0' ],
+44 silly audit   'lightningcss-android-arm64': [ '1.32.0' ],
+44 silly audit   'lightningcss-darwin-arm64': [ '1.32.0' ],
+44 silly audit   'lightningcss-darwin-x64': [ '1.32.0' ],
+44 silly audit   'lightningcss-freebsd-x64': [ '1.32.0' ],
+44 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.32.0' ],
+44 silly audit   'lightningcss-linux-arm64-gnu': [ '1.32.0' ],
+44 silly audit   'lightningcss-linux-arm64-musl': [ '1.32.0' ],
+44 silly audit   'lightningcss-linux-x64-gnu': [ '1.32.0' ],
+44 silly audit   'lightningcss-linux-x64-musl': [ '1.32.0' ],
+44 silly audit   'lightningcss-win32-arm64-msvc': [ '1.32.0' ],
+44 silly audit   'lightningcss-win32-x64-msvc': [ '1.32.0' ],
+44 silly audit   'local-pkg': [ '1.2.1' ],
+44 silly audit   lodash: [ '4.18.1' ],
+44 silly audit   'lodash-es': [ '4.18.1' ],
+44 silly audit   'lodash-unified': [ '1.0.3' ],
+44 silly audit   'lodash.clonedeep': [ '4.5.0' ],
+44 silly audit   'lodash.isequal': [ '4.5.0' ],
+44 silly audit   long: [ '5.3.2' ],
+44 silly audit   'magic-string-ast': [ '1.0.3' ],
+44 silly audit   'math-intrinsics': [ '1.1.0' ],
+44 silly audit   'memoize-one': [ '6.0.0' ],
+44 silly audit   'mersenne-twister': [ '1.1.0' ],
+44 silly audit   meshoptimizer: [ '1.1.1' ],
+44 silly audit   mgrs: [ '1.0.0' ],
+44 silly audit   mime: [ '1.6.0' ],
+44 silly audit   'mime-db': [ '1.52.0' ],
+44 silly audit   'mime-types': [ '2.1.35' ],
+44 silly audit   mlly: [ '1.8.2' ],
+44 silly audit   'pkg-types': [ '1.3.1', '2.3.1' ],
+44 silly audit   ms: [ '2.1.3', '2.0.0' ],
+44 silly audit   'muggle-string': [ '0.4.1' ],
+44 silly audit   nanoid: [ '3.3.12' ],
+44 silly audit   'normalize-wheel-es': [ '1.2.0' ],
+44 silly audit   'nosleep.js': [ '0.12.0' ],
+44 silly audit   'on-finished': [ '2.4.1' ],
+44 silly audit   pako: [ '2.1.0' ],
+44 silly audit   parchment: [ '3.0.0' ],
+44 silly audit   parsedbf: [ '2.0.0' ],
+44 silly audit   parseurl: [ '1.3.3' ],
+44 silly audit   'path-browserify': [ '1.0.1' ],
+44 silly audit   pathe: [ '2.0.3' ],
+44 silly audit   'perfect-debounce': [ '2.1.0' ],
+44 silly audit   picocolors: [ '1.1.1' ],
+44 silly audit   postcss: [ '8.5.15' ],
+44 silly audit   proj4: [ '2.20.8' ],
+44 silly audit   protobufjs: [ '8.4.2' ],
+44 silly audit   'proxy-from-env': [ '2.1.0' ],
+44 silly audit   quansync: [ '0.2.11' ],
+44 silly audit   quickselect: [ '3.0.0' ],
+44 silly audit   quill: [ '2.0.3' ],
+44 silly audit   'quill-delta': [ '5.1.0' ],
+44 silly audit   'range-parser': [ '1.2.1' ],
+44 silly audit   rbush: [ '4.0.1' ],
+44 silly audit   readdirp: [ '5.0.0' ],
+44 silly audit   rolldown: [ '1.0.2' ],
+44 silly audit   rollup: [ '2.80.0' ],
+44 silly audit   'rollup-plugin-external-globals': [ '0.6.1' ],
+44 silly audit   scule: [ '1.3.0' ],
+44 silly audit   send: [ '0.19.2' ],
+44 silly audit   'serve-static': [ '1.16.3' ],
+44 silly audit   setprototypeof: [ '1.2.0' ],
+44 silly audit   shpjs: [ '6.2.0' ],
+44 silly audit   'source-map-js': [ '1.2.1' ],
+44 silly audit   'sourcemap-codec': [ '1.4.8' ],
+44 silly audit   statuses: [ '2.0.2' ],
+44 silly audit   'text-segmentation': [ '1.0.3' ],
+44 silly audit   tinyglobby: [ '0.2.16' ],
+44 silly audit   toidentifier: [ '1.0.1' ],
+44 silly audit   'topojson-client': [ '3.1.0' ],
+44 silly audit   tslib: [ '2.8.1' ],
+44 silly audit   typescript: [ '6.0.3' ],
+44 silly audit   ufo: [ '1.6.4' ],
+44 silly audit   universalify: [ '2.0.1' ],
+44 silly audit   unplugin: [ '3.0.0' ],
+44 silly audit   'unplugin-utils': [ '0.3.1' ],
+44 silly audit   urijs: [ '1.19.11' ],
+44 silly audit   utrie: [ '1.0.2' ],
+44 silly audit   viewerjs: [ '1.11.7' ],
+44 silly audit   vite: [ '8.0.14' ],
+44 silly audit   'vite-plugin-cesium': [ '1.2.23' ],
+44 silly audit   'vscode-uri': [ '3.1.0' ],
+44 silly audit   vue: [ '3.5.34' ],
+44 silly audit   'vue-component-type-helpers': [ '3.3.1' ],
+44 silly audit   'vue-router': [ '5.0.7' ],
+44 silly audit   'vue-tsc': [ '3.3.1' ],
+44 silly audit   'webpack-virtual-modules': [ '0.6.2' ],
+44 silly audit   'wkt-parser': [ '1.5.5' ],
+44 silly audit   yaml: [ '2.9.0' ]
+44 silly audit }
+45 http cache lightningcss-win32-x64-msvc@https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz 0ms (cache hit)
+46 http cache @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz 0ms (cache hit)
+47 http cache @rolldown/binding-win32-x64-msvc@https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.2.tgz 0ms (cache hit)
+48 http cache yaml@https://registry.npmjs.org/yaml/-/yaml-2.9.0.tgz 0ms (cache hit)
+49 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz 0ms (cache hit)
+50 http cache topojson-client@https://registry.npmjs.org/topojson-client/-/topojson-client-3.1.0.tgz 0ms (cache hit)
+51 http cache vite@https://registry.npmjs.org/vite/-/vite-8.0.14.tgz 0ms (cache hit)
+52 http cache vue-tsc@https://registry.npmjs.org/vue-tsc/-/vue-tsc-3.3.1.tgz 0ms (cache hit)
+53 http cache rollup@https://registry.npmjs.org/rollup/-/rollup-2.80.0.tgz 0ms (cache hit)
+54 http cache rolldown@https://registry.npmjs.org/rolldown/-/rolldown-1.0.2.tgz 0ms (cache hit)
+55 http cache mime@https://registry.npmjs.org/mime/-/mime-1.6.0.tgz 0ms (cache hit)
+56 http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz 0ms (cache hit)
+57 http cache jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz 0ms (cache hit)
+58 silly tarball no local data for lightningcss-win32-x64-msvc@https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz. Extracting by manifest.
+59 http cache @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-8.0.0-rc.5.tgz 0ms (cache hit)
+60 http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz 0ms (cache hit)
+61 http cache json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+62 silly tarball no local data for @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz. Extracting by manifest.
+63 silly tarball no local data for @rolldown/binding-win32-x64-msvc@https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.2.tgz. Extracting by manifest.
+64 silly tarball no local data for yaml@https://registry.npmjs.org/yaml/-/yaml-2.9.0.tgz. Extracting by manifest.
+65 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz. Extracting by manifest.
+66 silly tarball no local data for topojson-client@https://registry.npmjs.org/topojson-client/-/topojson-client-3.1.0.tgz. Extracting by manifest.
+67 silly tarball no local data for vite@https://registry.npmjs.org/vite/-/vite-8.0.14.tgz. Extracting by manifest.
+68 silly tarball no local data for vue-tsc@https://registry.npmjs.org/vue-tsc/-/vue-tsc-3.3.1.tgz. Extracting by manifest.
+69 silly tarball no local data for rollup@https://registry.npmjs.org/rollup/-/rollup-2.80.0.tgz. Extracting by manifest.
+70 silly tarball no local data for rolldown@https://registry.npmjs.org/rolldown/-/rolldown-1.0.2.tgz. Extracting by manifest.
+71 silly tarball no local data for mime@https://registry.npmjs.org/mime/-/mime-1.6.0.tgz. Extracting by manifest.
+72 silly tarball no local data for nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz. Extracting by manifest.
+73 silly tarball no local data for jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz. Extracting by manifest.
+74 silly tarball no local data for @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-8.0.0-rc.5.tgz. Extracting by manifest.
+75 silly tarball no local data for acorn@https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz. Extracting by manifest.
+76 silly tarball no local data for json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz. Extracting by manifest.
+77 http fetch GET 200 https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz 630ms (cache miss)
+78 http fetch GET 200 https://registry.npmjs.org/topojson-client/-/topojson-client-3.1.0.tgz 651ms (cache miss)
+79 http fetch GET 200 https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz 668ms (cache miss)
+80 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 907ms
+81 silly audit report {
+81 silly audit report   quill: [
+81 silly audit report     {
+81 silly audit report       id: 1116451,
+81 silly audit report       url: 'https://github.com/advisories/GHSA-v3m3-f69x-jf25',
+81 silly audit report       title: 'Quill is vulnerable to XSS via HTML export feature',
+81 silly audit report       severity: 'low',
+81 silly audit report       vulnerable_versions: '=2.0.3',
+81 silly audit report       cwe: [Array],
+81 silly audit report       cvss: [Object]
+81 silly audit report     }
+81 silly audit report   ]
+81 silly audit report }
+82 silly packumentCache corgi:https://registry.npmjs.org/quill cache-miss
+83 http fetch GET 200 https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 925ms (cache miss)
+84 http fetch GET 200 https://registry.npmjs.org/rolldown/-/rolldown-1.0.2.tgz 1260ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/yaml/-/yaml-2.9.0.tgz 1397ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/quill 579ms (cache miss)
+87 silly packumentCache corgi:https://registry.npmjs.org/quill set size:undefined disposed:false
+88 http fetch GET 200 https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz 1731ms (cache miss)
+89 http fetch GET 200 https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz 2084ms (cache miss)
+90 http fetch GET 200 https://registry.npmjs.org/vite/-/vite-8.0.14.tgz 2592ms (cache miss)
+91 http fetch GET 200 https://registry.npmjs.org/@babel/parser/-/parser-8.0.0-rc.5.tgz 2888ms (cache miss)
+92 http fetch GET 200 https://registry.npmjs.org/rollup/-/rollup-2.80.0.tgz 3010ms (cache miss)
+93 http fetch GET 200 https://registry.npmjs.org/vue-tsc/-/vue-tsc-3.3.1.tgz 3019ms (cache miss)
+94 http fetch GET 200 https://registry.npmjs.org/mime/-/mime-1.6.0.tgz 3198ms (cache miss)
+95 http fetch GET 200 https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz 5023ms (cache miss)
+96 http fetch GET 200 https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.2.tgz 9286ms (cache miss)
+97 http fetch GET 200 https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz 10618ms (cache miss)
+98 silly ADD node_modules/lightningcss-win32-x64-msvc
+99 silly ADD node_modules/@rolldown/binding-win32-x64-msvc
+100 silly REMOVE node_modules/@rolldown/binding-darwin-arm64
+101 silly CHANGE node_modules/@babel/parser
+102 silly CHANGE node_modules/@babel/generator/node_modules/@babel/parser
+103 silly CHANGE node_modules/yaml
+104 silly CHANGE node_modules/vue-tsc
+105 silly CHANGE node_modules/vite
+106 silly CHANGE node_modules/typescript
+107 silly CHANGE node_modules/topojson-client
+108 silly CHANGE node_modules/rollup
+109 silly CHANGE node_modules/rolldown
+110 silly CHANGE node_modules/nanoid
+111 silly CHANGE node_modules/mime
+112 silly REMOVE node_modules/lightningcss-darwin-arm64
+113 silly CHANGE node_modules/jsesc
+114 silly CHANGE node_modules/json5
+115 silly REMOVE node_modules/fsevents
+116 silly CHANGE node_modules/acorn
+117 verbose cwd P:\AI_code\WebGIS\CSBDP_20260525\CSBDP-main\frontend
+118 verbose os Windows_NT 10.0.22621
+119 verbose node v24.13.0
+120 verbose npm  v11.6.2
+121 notice
+121 notice New minor version of npm available! 11.6.2 -> 11.15.0
+121 notice Changelog: https://github.com/npm/cli/releases/tag/v11.15.0
+121 notice To update run: npm install -g npm@11.15.0
+121 notice  { force: true, Symbol(proc-log.meta): true }
+122 verbose exit 0
+123 info ok

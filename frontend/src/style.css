@@ -1,0 +1,493 @@
+:root {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #e2e8f0;
+  background: #08111f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(14, 165, 233, 0.18), transparent 34%),
+    linear-gradient(135deg, #08111f 0%, #0a2540 45%, #114777 100%);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.login-shell {
+  width: min(1120px, 100%);
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(7, 15, 28, 0.86);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.45);
+}
+
+.login-brand {
+  position: relative;
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background:
+    linear-gradient(160deg, rgba(15, 23, 42, 0.2), rgba(8, 145, 178, 0.6)),
+    linear-gradient(180deg, rgba(12, 74, 110, 0.15), rgba(2, 6, 23, 0.2));
+}
+
+.login-brand::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1), rgba(2, 6, 23, 0.82));
+}
+
+.login-brand > * {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-mark {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.brand-kicker,
+.header-kicker,
+.header-user-label,
+.panel-header p,
+.legend-card p,
+.sidebar-header p,
+.demo-card p {
+  margin: 0;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+}
+
+.login-brand h1,
+.app-header h1 {
+  margin: 12px 0;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+}
+
+.brand-copy {
+  max-width: 420px;
+  margin: 0;
+  color: rgba(226, 232, 240, 0.86);
+  font-size: 16px;
+}
+
+.login-panel {
+  padding: 56px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(248, 250, 252, 0.96);
+  color: #0f172a;
+}
+
+.panel-header h2 {
+  margin: 10px 0 0;
+  font-size: 32px;
+}
+
+.login-form {
+  display: grid;
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.login-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-form input {
+  height: 48px;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 0 16px;
+  background: #fff;
+}
+
+.login-form input:focus {
+  outline: 2px solid rgba(14, 165, 233, 0.26);
+  border-color: #0891b2;
+}
+
+.form-error {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.submit-button,
+.logout-button,
+.floating-toolbar button,
+.bookmark-button,
+.menu-button {
+  border: 0;
+  border-radius: 14px;
+  transition: 0.2s ease;
+}
+
+.submit-button {
+  height: 50px;
+  background: linear-gradient(135deg, #0369a1, #0891b2);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(8, 145, 178, 0.28);
+}
+
+.submit-button:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.demo-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: #e0f2fe;
+  color: #0c4a6e;
+}
+
+.demo-card strong {
+  display: block;
+  margin-top: 4px;
+}
+
+.dashboard-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 22px;
+  background: rgba(7, 15, 28, 0.72);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.app-header h1 {
+  font-size: 24px;
+  margin: 4px 0 0;
+}
+
+.menu-button {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  align-content: center;
+  gap: 5px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.menu-button span {
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-user strong,
+.header-user-label {
+  display: block;
+}
+
+.logout-button {
+  padding: 12px 18px;
+  background: rgba(14, 165, 233, 0.16);
+  color: #e0f2fe;
+}
+
+.dashboard-main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+}
+
+.sidebar {
+  overflow: auto;
+  padding: 20px;
+  background: rgba(7, 15, 28, 0.76);
+  border-right: 1px solid rgba(148, 163, 184, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-header h2 {
+  margin: 8px 0 6px;
+}
+
+.legend-card,
+.layer-card,
+.floating-panel {
+  background: rgba(15, 23, 42, 0.84);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 18px;
+}
+
+.legend-card {
+  padding: 18px;
+  margin: 24px 0;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.legend-row span {
+  width: 22px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.layer-list {
+  display: grid;
+  gap: 12px;
+}
+
+.layer-card {
+  padding: 14px;
+}
+
+.layer-topline {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.layer-topline p {
+  margin: 6px 0 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.layer-card input[type='range'] {
+  width: 100%;
+}
+
+.map-shell {
+  position: relative;
+  min-width: 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.floating-toolbar {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.floating-toolbar button,
+.bookmark-button {
+  min-width: 64px;
+  padding: 11px 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
+}
+
+.floating-toolbar button.active {
+  background: #0891b2;
+  color: #fff;
+}
+
+.floating-panel {
+  position: absolute;
+  top: 18px;
+  right: 98px;
+  z-index: 1000;
+  width: 280px;
+  padding: 18px;
+}
+
+.panel-compact label,
+.floating-panel label {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.bookmark-button {
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.map-tip,
+.coord-box,
+.notice-bar {
+  position: absolute;
+  z-index: 1000;
+  border-radius: 14px;
+  backdrop-filter: blur(14px);
+}
+
+.map-tip {
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 16px;
+  background: rgba(8, 47, 73, 0.88);
+}
+
+.coord-box {
+  right: 18px;
+  bottom: 18px;
+  padding: 10px 14px;
+  background: rgba(15, 23, 42, 0.84);
+}
+
+.notice-bar {
+  top: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 16px;
+  background: rgba(185, 28, 28, 0.92);
+}
+
+.text-marker-label {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #0891b2;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.leaflet-container {
+  background: #dbeafe;
+}
+
+@media (max-width: 960px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .login-brand {
+    min-height: 320px;
+  }
+
+  .dashboard-main {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 84px;
+    left: 14px;
+    bottom: 14px;
+    width: min(360px, calc(100vw - 28px));
+    z-index: 1200;
+    transform: translateX(-120%);
+    border-radius: 22px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .floating-toolbar {
+    top: auto;
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .floating-toolbar button {
+    min-width: 0;
+  }
+
+  .floating-panel {
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    width: auto;
+  }
+
+  .coord-box {
+    left: 18px;
+    right: auto;
+    bottom: 138px;
+  }
+}
