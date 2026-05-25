@@ -281,6 +281,7 @@ import {
   ImageryLayer,
   LabelStyle,
   Math as CesiumMath,
+  PolygonHierarchy,
   Rectangle,
   ScreenSpaceEventHandler,
   ScreenSpaceEventType,
@@ -1406,7 +1407,16 @@ function createEmptyShpBounds(): ShpBounds {
 }
 
 function isValidLngLat(value: unknown): value is [number, number, ...number[]] {
-  return Array.isArray(value) && value.length >= 2 && typeof value[0] === 'number' && typeof value[1] === 'number' && Number.isFinite(value[0]) && Number.isFinite(value[1])
+  return Array.isArray(value)
+    && value.length >= 2
+    && typeof value[0] === 'number'
+    && typeof value[1] === 'number'
+    && Number.isFinite(value[0])
+    && Number.isFinite(value[1])
+    && value[0] >= -180
+    && value[0] <= 180
+    && value[1] >= -90
+    && value[1] <= 90
 }
 
 function extendShpBounds(bounds: ShpBounds, coordinate: [number, number, ...number[]]) {
@@ -1495,6 +1505,11 @@ function addPolygonEntity(dataSource: CustomDataSource, rings: unknown, feature:
   }
 
   const outerRing = collectGeometryCoordinates(rings[0], bounds)
+  const holes = rings
+    .slice(1)
+    .map((ring) => collectGeometryCoordinates(ring, bounds))
+    .filter((ring) => ring.length >= 3)
+    .map((ring) => new PolygonHierarchy(Cartesian3.fromDegreesArray(ring.flatMap((point) => [point[0], point[1]]))))
 
   if (outerRing.length < 3) {
     return
@@ -1503,7 +1518,10 @@ function addPolygonEntity(dataSource: CustomDataSource, rings: unknown, feature:
   dataSource.entities.add({
     name: readFeatureName(feature, fallbackName),
     polygon: {
-      hierarchy: Cartesian3.fromDegreesArray(outerRing.flatMap((point) => [point[0], point[1]])),
+      hierarchy: new PolygonHierarchy(
+        Cartesian3.fromDegreesArray(outerRing.flatMap((point) => [point[0], point[1]])),
+        holes,
+      ),
       material: Color.fromCssColorString('#14b8a6').withAlpha(0.28),
       outline: true,
       outlineColor: Color.fromCssColorString('#0f766e'),
