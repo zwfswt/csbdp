@@ -25,6 +25,7 @@
         "html2canvas": "^1.4.1",
         "leaflet": "^1.9.4",
         "leaflet.markercluster": "^1.5.3",
+        "proj4": "^2.20.8",
         "quill": "^2.0.3",
         "shpjs": "^6.2.0",
         "viewerjs": "^1.11.7",

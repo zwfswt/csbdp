@@ -83,7 +83,29 @@
         <button id="shpLoadBtn" class="tool-btn" title="加载 SHP 数据" :disabled="isLoadingShp" @click="openShpFilePicker">
           <i class="fa-solid fa-file-import"></i>
         </button>
-        <input ref="shpFileInput" class="shp-file-input" type="file" accept=".zip,.shp,.shx,.dbf,.prj,.cpg" multiple @change="handleShpFileChange" />
+        <input ref="shpFileInput" class="shp-file-input" type="file" accept=".zip,.shp,.shx,.dbf,.prj,.cpg" multiple @change="handleShpFileChangeWithProjection" />
+
+        <div v-if="shpProjectionDialogOpen" class="shp-projection-mask" @click.self="cancelShpProjectionDialog">
+          <div class="shp-projection-dialog">
+            <div class="shp-projection-header">
+              <h3>SHP 坐标系</h3>
+              <button type="button" class="shp-projection-close" @click="cancelShpProjectionDialog">×</button>
+            </div>
+            <div class="shp-projection-body">
+              <label v-for="option in shpProjectionOptions" :key="option.value" class="shp-projection-option">
+                <input v-model="shpProjectionChoice" type="radio" name="shpProjection2d" :value="option.value" />
+                <span>
+                  <strong>{{ option.label }}</strong>
+                  <small>{{ option.description }}</small>
+                </span>
+              </label>
+            </div>
+            <div class="shp-projection-actions">
+              <button type="button" class="shp-projection-secondary" @click="cancelShpProjectionDialog">取消</button>
+              <button type="button" class="shp-projection-primary" @click="confirmShpProjectionDialog">加载</button>
+            </div>
+          </div>
+        </div>
 
         <button id="drawingBtn" class="tool-btn" :class="{ active: drawingToolsOpen || isDrawingToolActive }" title="绘图工具" @click="toggleDrawingTools">
           <i class="fa-solid fa-pen-to-square"></i>
@@ -253,7 +275,7 @@ import {
   type Map2DViewState,
 } from '../utils/mapViewState'
 import { normalizeLayerConfigs } from '../utils/layerConfig'
-import { createUniqueShpLayerName, parseShapefileFiles, type GeoJsonFeature, type GeoJsonFeatureCollection } from '../utils/shapefile'
+import { createUniqueShpLayerName, parseShapefileFiles, SHP_PROJECTION_OPTIONS, type GeoJsonFeature, type GeoJsonFeatureCollection, type ShpProjectionOverride } from '../utils/shapefile'
 
 type ToolName = 'marker' | 'text' | 'line' | 'polygon' | 'freehand' | 'measure' | 'areaMeasure' | null
 type UiLayerConfig = BusinessLayerConfig & { isTemporaryShp?: boolean }
@@ -280,6 +302,9 @@ const toolTip = ref('')
 const coordText = ref('经度：--，纬度：--，缩放级别：--')
 const noticeMessage = ref('')
 const isLoadingShp = ref(false)
+const shpProjectionDialogOpen = ref(false)
+const shpProjectionChoice = ref<ShpProjectionOverride>('auto')
+const pendingShpFiles = ref<File[]>([])
 const loginUserText = ref(getStoredLoginUser() ?? 'admin')
 const fieldSurveys = ref<FieldSurvey[]>([])
 const activeFieldSurvey = ref<FieldSurvey | null>(null)
@@ -303,6 +328,7 @@ const basemapOptions = [
 ]
 
 const freehandColorOptions = ['#0f766e', '#ef4444', '#f97316', '#eab308', '#22c55e', '#2563eb', '#7c3aed', '#111827']
+const shpProjectionOptions = SHP_PROJECTION_OPTIONS
 
 const isDrawingToolActive = computed(() => currentTool.value === 'marker' || currentTool.value === 'text' || currentTool.value === 'line' || currentTool.value === 'polygon')
 const isMeasurementToolActive = computed(() => currentTool.value === 'measure' || currentTool.value === 'areaMeasure')
@@ -768,17 +794,17 @@ function createTemporaryShpLeafletLayer(geojson: GeoJsonFeatureCollection, opaci
     style() {
       return {
         color: '#0f766e',
-        weight: 3,
+        weight: 1.5,
         opacity,
         fillColor: '#14b8a6',
-        fillOpacity: Math.min(opacity, 0.28),
+        fillOpacity: Math.min(opacity, 0.18),
       }
     },
     pointToLayer(_feature, latlng) {
       return L.circleMarker(latlng, {
-        radius: 7,
+        radius: 1,
         color: '#ffffff',
-        weight: 2,
+        weight: 0,
         opacity,
         fillColor: '#f97316',
         fillOpacity: Math.min(opacity, 0.9),
@@ -820,6 +846,96 @@ function fitTemporaryShpLayer(layer: L.GeoJSON) {
 
   map.fitBounds(bounds.pad(0.12), { maxZoom: 14 })
   return true
+}
+
+function shouldAskShpProjection(files: File[]) {
+  const extensions = files.map((file) => file.name.split('.').pop()?.toLowerCase() ?? '')
+  return extensions.includes('shp') && !extensions.includes('zip') && !extensions.includes('prj')
+}
+
+function cancelShpProjectionDialog() {
+  shpProjectionDialogOpen.value = false
+  pendingShpFiles.value = []
+  shpProjectionChoice.value = 'auto'
+
+  if (shpFileInput.value) {
+    shpFileInput.value.value = ''
+  }
+}
+
+async function confirmShpProjectionDialog() {
+  const files = pendingShpFiles.value
+  shpProjectionDialogOpen.value = false
+  pendingShpFiles.value = []
+
+  isLoadingShp.value = true
+
+  try {
+    await loadSelectedShpFiles(files, shpProjectionChoice.value)
+  } catch (error) {
+    showNotice(error instanceof Error ? error.message : 'SHP 数据解析失败。')
+  } finally {
+    isLoadingShp.value = false
+  }
+
+  if (shpFileInput.value) {
+    shpFileInput.value.value = ''
+  }
+}
+
+async function handleShpFileChangeWithProjection(event: Event) {
+  const input = event.target as HTMLInputElement
+  const files = Array.from(input.files ?? [])
+
+  if (!files.length || !map) {
+    return
+  }
+
+  activePanel.value = null
+  drawingToolsOpen.value = false
+  measurementToolsOpen.value = false
+  closeActiveTool()
+
+  if (shouldAskShpProjection(files)) {
+    pendingShpFiles.value = files
+    shpProjectionChoice.value = 'auto'
+    shpProjectionDialogOpen.value = true
+    showNotice('请选择无 .prj SHP 数据的坐标系。')
+    return
+  }
+
+  isLoadingShp.value = true
+
+  try {
+    await loadSelectedShpFiles(files)
+  } catch (error) {
+    showNotice(error instanceof Error ? error.message : 'SHP 数据解析失败。')
+  } finally {
+    isLoadingShp.value = false
+    input.value = ''
+  }
+}
+
+async function loadSelectedShpFiles(files: FileList | File[], projectionOverride: ShpProjectionOverride = 'auto') {
+  const parsedLayers = await parseShapefileFiles(files, { projectionOverride })
+  let fitted = false
+
+  for (const parsedLayer of parsedLayers) {
+    const name = createUniqueShpLayerName(parsedLayer.name, uiLayers.value.map((layer) => layer.name))
+    const layerConfig = createTemporaryShpLayerConfig(name)
+    const leafletLayer = createTemporaryShpLeafletLayer(parsedLayer.geojson, layerConfig.opacity)
+
+    temporaryShpLayers.set(name, leafletLayer)
+    businessLayerInstances.set(name, leafletLayer)
+    uiLayers.value = uiLayers.value.concat(layerConfig)
+    leafletLayer.addTo(map!)
+
+    if (!fitted) {
+      fitted = fitTemporaryShpLayer(leafletLayer)
+    }
+  }
+
+  showNotice(fitted ? 'SHP 鏁版嵁宸插姞杞藉苟瀹氫綅鍒板浘灞傝寖鍥淬€?' : 'SHP 鏁版嵁宸插姞杞斤紝浣嗘湭鎵惧埌鍙畾浣嶈寖鍥淬€?')
 }
 
 async function handleShpFileChange(event: Event) {
@@ -1580,6 +1696,106 @@ onBeforeUnmount(() => {
   display: none;
 }
 
+.shp-projection-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 4200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.42);
+}
+
+.shp-projection-dialog {
+  width: min(520px, 100%);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.32);
+  overflow: hidden;
+}
+
+.shp-projection-header,
+.shp-projection-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.shp-projection-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.shp-projection-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #334155;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.shp-projection-body {
+  display: grid;
+  gap: 10px;
+  max-height: min(54vh, 440px);
+  overflow-y: auto;
+  padding: 16px 18px;
+}
+
+.shp-projection-option {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.shp-projection-option strong,
+.shp-projection-option small {
+  display: block;
+}
+
+.shp-projection-option small {
+  margin-top: 4px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.shp-projection-actions {
+  justify-content: flex-end;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: none;
+}
+
+.shp-projection-primary,
+.shp-projection-secondary {
+  min-width: 76px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.shp-projection-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.shp-projection-secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
 .drawing-tool-panel,
 .measurement-tool-panel,
 .freehand-color-panel {
@@ -1672,6 +1888,7 @@ onBeforeUnmount(() => {
 :global(.map-print-mode .tip),
 :global(.map-print-mode .coord-box),
 :global(.map-print-mode .notice),
+:global(.map-print-mode .shp-projection-mask),
 :global(.map-print-mode .survey-dialog-mask) {
   display: none !important;
 }

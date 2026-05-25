@@ -1,1 +1,6 @@
+
+> backend@1.0.0 dev
+> node --watch src/server.js
+
 CSBDP backend listening on http://127.0.0.1:3000
+Completed running 'src/server.js'. Waiting for file changes before restarting...

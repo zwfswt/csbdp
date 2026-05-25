@@ -1,4 +1,11 @@
 
-  [32m[1mVITE[22m v8.0.14[39m  [2mready in [0m[1m851[22m[2m[0m ms[22m
+> frontend@0.0.0 dev
+> vite --host 127.0.0.1
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m03:21:57[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because lockfile has changed
+Port 5173 is in use, trying another one...
+
+  [32m[1mVITE[22m v8.0.14[39m  [2mready in [0m[1m1182[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5174[22m/[39m
+[2m03:21:59[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
