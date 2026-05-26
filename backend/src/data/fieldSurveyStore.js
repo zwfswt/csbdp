@@ -103,7 +103,8 @@ const listRemovedImagesStatement = database.prepare(`
 const listAllImagePathsStatement = database.prepare('SELECT image_path FROM field_survey_images WHERE survey_id = ?')
 
 function toImageUrl(imagePath) {
-  return `/uploads/field-surveys/${path.basename(imagePath)}`
+  const fileName = String(imagePath ?? '').split(/[\\/]/).filter(Boolean).at(-1)
+  return `/uploads/field-surveys/${encodeURIComponent(fileName ?? '')}`
 }
 
 function mapImages(surveyId) {
